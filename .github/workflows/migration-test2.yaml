@@ -1,6 +1,12 @@
 name: Database migration test
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
 
 jobs:
   run_migration_test:
